@@ -1,0 +1,114 @@
+---
+title: "Artículos | JonaBlog"
+description: "Todos los artículos de aprendizaje y desarrollo de Jonathan Rodríguez."
+# Listing thumbnails use the cover declared in each post.
+listing:
+  id: all-posts
+  contents: ../posts/*.qmd
+  sort: "date desc"
+  type: grid
+  page-size: 1000
+  fields: [image, title, date, reading-time, categories, description]
+  filter-ui: false
+  sort-ui: false
+---
+
+```{=html}
+<div class="blog-shell">
+<nav class="blog-nav" aria-label="Navegación del blog"><a class="blog-brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span><strong>Jona<span>Blog</span></strong></a><div class="blog-links"><a href="index.html">Inicio</a><a class="active" href="articulos.html">Artículos</a><a href="categorias.html">Categorías</a><a href="social.html">Social Media</a></div><a class="back-link" href="../index.html">Volver al portafolio</a></nav>
+<main class="blog-main listing-page">
+<header class="page-intro"><span class="eyebrow-label">ARCHIVO DEL BLOG</span><h1>Artículos</h1><p>Experiencias, proyectos y aprendizajes contados con claridad. Explora todas las entradas o filtra por tema.</p></header>
+<section class="article-browser" aria-label="Buscar y filtrar artículos"><div class="article-browser-copy"><span class="eyebrow-label">BIBLIOTECA DE APRENDIZAJE</span><h2>Encuentra una lectura</h2><p>Elige una tecnología o busca por palabra clave.</p></div><label class="article-search"><span class="visually-hidden">Buscar artículos</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/></svg><input id="article-search" type="search" placeholder="Buscar artículos" autocomplete="off"></label><div class="article-filters" role="group" aria-label="Filtrar por categoría"><button class="article-filter is-active" type="button" data-filter="all" aria-pressed="true">Todos</button><button class="article-filter" type="button" data-filter="python" aria-pressed="false">Python</button><button class="article-filter" type="button" data-filter="fastapi" aria-pressed="false">FastAPI</button><button class="article-filter" type="button" data-filter="react" aria-pressed="false">React</button><button class="article-filter" type="button" data-filter="kotlin" aria-pressed="false">Kotlin</button></div></section>
+</main>
+```
+
+::: {#all-posts}
+:::
+
+```{=html}
+<div class="article-empty" id="article-empty" hidden><span class="empty-mark">JR</span><h2 id="article-empty-title">Aún no hay artículos en esta categoría</h2><p id="article-empty-copy">Estoy preparando nuevas entradas sobre este tema. Mientras tanto, puedes explorar todas las publicaciones.</p><button type="button" class="article-filter-reset">Ver todos los artículos</button></div>
+<script>
+(() => {
+  const listing = document.querySelector('#listing-all-posts, #all-posts');
+  const cards = Array.from(listing?.querySelectorAll('.quarto-grid-item') || []);
+  const filters = Array.from(document.querySelectorAll('[data-filter]'));
+  const search = document.querySelector('#article-search');
+  const empty = document.querySelector('#article-empty');
+  const emptyTitle = document.querySelector('#article-empty-title');
+  const emptyCopy = document.querySelector('#article-empty-copy');
+  const normalize = value => (value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase();
+  const params = new URLSearchParams(window.location.search);
+  let selected = normalize(params.get('categoria') || 'all');
+  if (!['all', 'python', 'fastapi', 'react', 'kotlin'].includes(selected)) selected = 'all';
+  const cardInfo = cards.map(card => {
+    const categoryNodes = Array.from(card.querySelectorAll('.listing-category'));
+    categoryNodes.forEach(node => {
+      node.removeAttribute('onclick');
+      node.setAttribute('role', 'button');
+      node.setAttribute('tabindex', '0');
+      node.setAttribute('aria-label', `Filtrar artículos de ${node.textContent.trim()}`);
+      const choose = () => filters.find(button => button.dataset.filter === normalize(node.textContent))?.click();
+      node.addEventListener('click', choose);
+      node.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); choose(); }
+      });
+    });
+    return {
+      card,
+      categories: categoryNodes.map(node => normalize(node.textContent)),
+      text: normalize(card.textContent)
+    };
+  });
+  const applyFilter = () => {
+    const query = normalize(search?.value);
+    let visible = 0;
+    cardInfo.forEach(({ card, categories, text }) => {
+      const categoryMatch = selected === 'all' || categories.includes(selected);
+      const searchMatch = !query || text.includes(query);
+      const item = card.closest('.g-col-1') || card;
+      item.hidden = !(categoryMatch && searchMatch);
+      if (!item.hidden) visible++;
+    });
+    filters.forEach(button => {
+      const active = button.dataset.filter === selected;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    if (empty) empty.hidden = visible > 0;
+    if (visible === 0 && emptyTitle && emptyCopy) {
+      if (query) {
+        emptyTitle.textContent = 'No encontramos artículos con esos términos';
+        emptyCopy.textContent = 'Prueba con otra palabra o cambia el filtro de categoría para ampliar la búsqueda.';
+      } else if (selected !== 'all') {
+        const categoryName = filters.find(button => button.dataset.filter === selected)?.textContent.trim() || selected;
+        emptyTitle.textContent = `Aún no hay artículos de ${categoryName}`;
+        emptyCopy.textContent = 'Esta categoría ya está lista para recibir nuevas entradas. Por ahora, puedes explorar las demás publicaciones.';
+      } else {
+        emptyTitle.textContent = 'Aún no hay artículos publicados';
+        emptyCopy.textContent = 'Las nuevas lecturas aparecerán aquí conforme vaya documentando mi aprendizaje.';
+      }
+    }
+  };
+  filters.forEach(button => button.addEventListener('click', () => {
+    selected = button.dataset.filter;
+    const url = new URL(window.location.href);
+    selected === 'all' ? url.searchParams.delete('categoria') : url.searchParams.set('categoria', selected);
+    window.history.replaceState({}, '', url);
+    applyFilter();
+  }));
+  search?.addEventListener('input', applyFilter);
+  document.querySelector('.article-filter-reset')?.addEventListener('click', () => {
+    selected = 'all';
+    if (search) search.value = '';
+    const url = new URL(window.location.href);
+    url.searchParams.delete('categoria');
+    window.history.replaceState({}, '', url);
+    applyFilter();
+    document.querySelector('.article-browser')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  applyFilter();
+})();
+</script>
+<footer class="blog-footer"><div class="blog-footer-inner"><div><strong>Jonathan Rodríguez</strong><p>Estudiante de Ingeniería en Tecnología de la Información e Innovación Digital · UPChiapas</p></div><div class="blog-footer-links"><a href="https://github.com/JonnySDE" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.75-1.32-3.75-1.32-.51-1.29-1.25-1.63-1.25-1.63-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.62 1.22 3.26.93.1-.73.39-1.23.71-1.51-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.43-2.21 1.16-2.99-.12-.28-.5-1.42.11-2.96 0 0 .95-.3 3.08 1.14a10.7 10.7 0 0 1 5.6 0c2.13-1.44 3.08-1.14 3.08-1.14.61 1.54.23 2.68.11 2.96.72.78 1.16 1.77 1.16 2.99 0 4.29-2.62 5.23-5.11 5.51.4.35.76 1.03.76 2.08v3.09c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg></a><a href="https://www.linkedin.com/in/jonathan-rodr%C3%ADguez-cabrera-ba8486435/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.2 3.1a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 0 0 0-4.2ZM3.4 9h3.6v11.7H3.4V9Zm5.8 0h3.4v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5v6.5h-3.6v-5.8c0-1.4 0-3.2-1.9-3.2s-2.2 1.5-2.2 3.1v5.9H9.2V9Z"/></svg></a><a href="https://www.instagram.com/jonathan_rodrgzz/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="instagram-dot" cx="17.6" cy="6.6" r="1"/></svg></a></div></div><div class="blog-footer-bottom">© 2026 Jonathan Rodríguez · JonaBlog</div></footer>
+</div>
+```

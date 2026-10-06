@@ -1,0 +1,18 @@
+[
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/posts/educontrol.html",
+      "/posts/home-score.html",
+      "/posts/uplace.html"
+    ]
+  },
+  {
+    "listing": "/blog/articulos.html",
+    "items": [
+      "/posts/educontrol.html",
+      "/posts/home-score.html",
+      "/posts/uplace.html"
+    ]
+  }
+]

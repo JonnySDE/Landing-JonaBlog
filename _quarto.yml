@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "JonaBlog | Jonathan Rodríguez"
+  description: "Portafolio de Jonathan Rodríguez: desarrollo de software, proyectos y aprendizaje."
+  open-graph: true
+  navbar:
+    title: "JonaBlog"
+    left:
+      - text: "Inicio"
+        href: "#inicio"
+      - text: "Habilidades"
+        href: "#habilidades"
+      - text: "Proyectos"
+        href: "#proyectos"
+      - text: "Certificaciones"
+        href: "#certificaciones"
+      - text: "Contacto"
+        href: "#contacto"
+    right:
+      - text: "IR AL BLOG"
+        href: "blog/index.html"
+  search: false
+
+format:
+  html:
+    lang: es-MX
+    theme: cosmo
+    css:
+      - styles.css
+      - blog.css
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: true
+    include-in-header:
+      text: |
+        <meta name="theme-color" content="#101b2a">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+

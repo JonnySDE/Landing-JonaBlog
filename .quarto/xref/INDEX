@@ -1,0 +1,26 @@
+{
+  "index.qmd": {
+    "index.html": "e29dc309"
+  },
+  "blog/articulos.qmd": {
+    "articulos.html": "330186bc"
+  },
+  "blog/categorias.qmd": {
+    "categorias.html": "f48dc5fa"
+  },
+  "blog/index.qmd": {
+    "index.html": "47856a9f"
+  },
+  "blog/social.qmd": {
+    "social.html": "e4b4c3a1"
+  },
+  "posts/educontrol.qmd": {
+    "educontrol.html": "ef908b72"
+  },
+  "posts/home-score.qmd": {
+    "home-score.html": "a77349f9"
+  },
+  "posts/uplace.qmd": {
+    "uplace.html": "15b911d2"
+  }
+}
