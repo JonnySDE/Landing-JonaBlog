@@ -1,0 +1,8 @@
+# Archivos temporales y caché de Quarto
+.quarto/
+**/*.quarto_ipynb
+
+# Salida antigua: el sitio publicado se generará en docs/
+_site/
+
+/.quarto/
