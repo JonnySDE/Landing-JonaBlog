@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-MX" xml:lang="es-MX"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Portafolio de Jonathan Rodríguez: desarrollo de software, proyectos y aprendizaje.">
+
+<title>JonaBlog | Jonathan Rodríguez</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<meta name="theme-color" content="#101b2a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="blog.css">
+<meta property="og:title" content="JonaBlog | Jonathan Rodríguez">
+<meta property="og:description" content="Portafolio de Jonathan Rodríguez: desarrollo de software, proyectos y aprendizaje.">
+<meta property="og:image" content="assets/images/jonathan.jpg">
+<meta property="og:site_name" content="JonaBlog | Jonathan Rodríguez">
+<meta property="og:image:alt" content="Fotografía de Jonathan Rodríguez">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">JonaBlog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./#inicio"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#habilidades"> 
+<span class="menu-text">Habilidades</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#proyectos"> 
+<span class="menu-text">Proyectos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#certificaciones"> 
+<span class="menu-text">Certificaciones</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#contacto"> 
+<span class="menu-text">Contacto</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./blog/index.html"> 
+<span class="menu-text">IR AL BLOG</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">JonaBlog | Jonathan Rodríguez</h1>
+</div>
+
+<div>
+  <div class="description">
+    Portafolio de Jonathan Rodríguez: desarrollo de software, proyectos y aprendizaje.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="landing" id="inicio">
+<section class="profile-card card" aria-labelledby="profile-title">
+<div class="avatar-wrap"><div class="avatar"><img src="assets/images/jonathan.jpg" alt="Fotografía de Jonathan Rodríguez" onerror="this.style.display='none'"><span aria-hidden="true">JR</span></div><i class="online-dot" title="Disponible"></i></div>
+<div class="profile-copy"><span class="welcome">Bienvenido a mi portafolio</span><h1 id="profile-title">Soy Jonathan Rodríguez</h1><p class="study"><span class="study-icon" aria-hidden="true"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m2 9 10-5 10 5-10 5L2 9Z"></path><path d="M6 11v5c3.5 2.5 8.5 2.5 12 0v-5m4-2v6"></path></svg></span> Ingeniería en Tecnología de la Información e Innovación Digital · 4.º cuatrimestre · UPChiapas</p><div class="note"><strong>SOBRE MÍ</strong><p>Soy estudiante de Ingeniería en Tecnología de la Información e Innovación Digital en la UPChiapas. Me interesa crear soluciones digitales útiles y aprender en cada etapa: comprender una necesidad, colaborar con otras personas y convertir una idea en una experiencia funcional. Actualmente estoy fortaleciendo mis conocimientos en desarrollo móvil y web, y explorando la automatización. Este espacio documenta mi evolución académica y profesional, junto con los aprendizajes que construyo en cada proyecto.</p></div></div>
+</section>
+<section class="skills section" id="habilidades">
+<div class="section-title"><h2 class="anchored"><span class="title-icon" aria-hidden="true">▤</span> Habilidades y Tecnologías</h2><p>Stack tecnológico y herramientas utilizadas en mis proyectos.</p></div>
+<div class="skill-list">
+<article class="skill-card card"><div class="skill-heading"><span class="skill-icon icon-blue"></span><div><h3 class="anchored">Desarrollo móvil Android</h3><p>Experiencia de proyecto con Kotlin y componentes de Jetpack Compose.</p></div></div><div class="chips blue-chips"><span>Kotlin</span><span>Jetpack Compose</span><span>MVVM</span></div></article>
+<article class="skill-card card"><div class="skill-heading"><span class="skill-icon icon-green"></span><div><h3 class="anchored">Desarrollo web</h3><p>Participación en proyectos web con tecnologías frontend actuales.</p></div></div><div class="chips green-chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span></div></article>
+<article class="skill-card card"><div class="skill-heading"><span class="skill-icon icon-amber"></span><div><h3 class="anchored">Trabajo en proyectos</h3><p>Colaboración en equipos y participación en distintas capas de desarrollo.</p></div></div><div class="chips amber-chips"><span>Frontend</span><span>Backend</span><span>Bases de datos</span><span>Trabajo en equipo</span></div></article>
+<article class="skill-card card"><div class="skill-heading"><span class="skill-icon icon-purple"></span><div><h3 class="anchored">Fundamentos de tecnología</h3><p>Formación inicial en nube, redes, sistemas operativos e Internet de las cosas.</p></div></div><div class="chips purple-chips"><span>Fundamentos de AWS Cloud</span><span>Redes</span><span>Sistemas operativos</span><span>IoT</span></div></article>
+</div>
+</section>
+<section class="projects section" id="proyectos">
+<div class="section-title"><h2 class="anchored">Proyectos desarrollados</h2><p>Experiencias de colaboración académica en desarrollo móvil y web.</p></div>
+<article class="project-main card"><div class="project-media project-media-landscape"><img src="assets/images/projects/educontrol.png" alt="Pantalla de bienvenida del sistema escolar EduControl" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="image-placeholder" hidden=""><span class="placeholder-mark" aria-hidden="true"><svg viewbox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="8.5" cy="9" r="1.5"></circle><path d="m4 17 5-5 3 3 3-4 5 6"></path></svg></span><strong>Captura de EduControl</strong><span>Agrega tu imagen en <code>assets/images/projects/educontrol.png</code></span></div></div><div class="project-description"><div><h3 class="anchored">EduControl</h3><p class="project-summary">Sistema de gestión escolar · Participación full stack</p></div><p>Colaboré con el equipo en el frontend, backend y base de datos de una plataforma para la gestión escolar. Entre sus módulos están alumnos, evaluaciones, registros, calificaciones, grupos y reportes. El proyecto se desarrolló con HTML, CSS y JavaScript.</p><div class="chips blue-chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Frontend</span><span>Backend</span><span>Base de datos</span></div><a class="project-button" href="https://github.com/JonnySDE/EduControl" target="_blank" rel="noopener noreferrer">Ver repositorio en GitHub <span aria-hidden="true">→</span></a></div></article>
+<h3 class="subhead anchored">Otros Proyectos Destacados</h3>
+<div class="other-projects">
+<article class="other-card card"><div class="project-media project-media-phone"><img src="assets/images/projects/homeScore.jpeg" alt="Captura vertical de Home Score, simulador de compra de vivienda" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="image-placeholder" hidden=""><span class="placeholder-mark" aria-hidden="true"><svg viewbox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="8.5" cy="9" r="1.5"></circle><path d="m4 17 5-5 3 3 3-4 5 6"></path></svg></span><strong>Captura de Home Score</strong><span><code>assets/images/projects/homeScore.jpeg</code></span></div></div><div class="other-project-heading"><span class="mini-icon icon-blue" aria-hidden="true"></span><div><p class="eyebrow">DESARROLLO MÓVIL · ANDROID</p><h3 class="anchored">Home Score</h3></div></div><p>Aplicación móvil que ayuda a explorar si una vivienda se ajusta a la situación financiera de una persona. Participé en el equipo de desarrollo con Kotlin, Jetpack Compose y arquitectura MVVM.</p><div class="chips"><span>Kotlin</span><span>Jetpack Compose</span><span>MVVM</span></div><a href="https://github.com/JonnySDE/HomeScore" target="_blank" rel="noopener noreferrer">Ver repositorio en GitHub <span aria-hidden="true">→</span></a></article>
+<article class="other-card card"><div class="project-media project-media-small project-media-landscape"><img src="assets/images/projects/uplace.png" alt="Interfaz web de UPlace, comunidad universitaria en UPChiapas" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="image-placeholder" hidden=""><span class="placeholder-mark" aria-hidden="true"><svg viewbox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="8.5" cy="9" r="1.5"></circle><path d="m4 17 5-5 3 3 3-4 5 6"></path></svg></span><strong>Captura de UPlace</strong><span><code>assets/images/projects/uplace.png</code></span></div></div><div class="other-project-heading"><span class="mini-icon icon-green" aria-hidden="true"></span><div><p class="eyebrow">DESARROLLO WEB · REACT</p><h3 class="anchored">UPlace</h3></div></div><p>Plataforma web para la comunidad universitaria de UPChiapas. Colaboré con el equipo en su desarrollo con React. La propuesta reúne publicaciones de estudiantes, remates de artículos, kits para foráneos y opciones de entrega segura dentro de la comunidad.</p><div class="chips"><span>React</span><span>Comunidad universitaria</span><span>Trabajo en equipo</span></div><a href="https://github.com/JonnySDE/UPlace" target="_blank" rel="noopener noreferrer">Ver repositorio en GitHub <span aria-hidden="true">→</span></a></article>
+</div>
+</section>
+<section class="certifications section" id="certificaciones">
+<div class="section-title"><h2 class="anchored">Certificaciones y Credenciales</h2><p>Insignias y cursos completados durante mi formación académica.</p></div>
+<div class="credential-list">
+<article class="credential-card card"><div class="credential-head"><div class="badge badge-blue"><img src="assets/images/badges/aws-cloud-foundations.png" alt="Insignia AWS Academy Cloud Foundations" onerror="this.hidden=true"></div><div class="credential-copy"><h3 class="anchored">AWS Academy Cloud Foundations</h3><p class="issuer">AWS Academy · Insignia de formación</p><p class="credential-date"><span>Completado</span><time datetime="2025-11-21">21 de noviembre de 2025</time></p></div></div><div class="credential-details"><h4 class="anchored">Lo que aprendí</h4><ul><li>Conceptos esenciales de computación en la nube.</li><li>Servicios principales de AWS y sus usos.</li><li>Fundamentos de seguridad, arquitectura, costos y soporte.</li></ul></div></article>
+<article class="credential-card card"><div class="credential-head"><div class="badge badge-green"><img src="assets/images/badges/introduction-to-iot.png" alt="Insignia Introduction to Internet of Things" onerror="this.hidden=true"></div><div class="credential-copy"><h3 class="anchored">Introduction to the Internet of Things</h3><p class="issuer">Cisco Networking Academy · Insignia</p><p class="credential-date"><span>Completado</span><time datetime="2025-11-05">5 de noviembre de 2025</time></p></div></div><div class="credential-details"><h4 class="anchored">Lo que aprendí</h4><ul><li>Cómo se conectan los dispositivos IoT a una red.</li><li>La relación entre el Internet de las cosas y la transformación digital.</li><li>Conceptos introductorios de programación, datos y seguridad en soluciones conectadas.</li></ul></div></article>
+<article class="credential-card card"><div class="credential-head"><div class="badge badge-amber"><img src="assets/images/badges/networking-basics.png" alt="Insignia Networking Basics" onerror="this.hidden=true"></div><div class="credential-copy"><h3 class="anchored">Networking Basics</h3><p class="issuer">Cisco Networking Academy · Insignia</p><p class="credential-date"><span>Completado</span><time datetime="2025-10-30">30 de octubre de 2025</time></p></div></div><div class="credential-details"><h4 class="anchored">Lo que aprendí</h4><ul><li>La función de los dispositivos, medios y protocolos de red.</li><li>Cómo las direcciones IP permiten la comunicación entre equipos.</li><li>Fundamentos para conectar dispositivos y crear una red local básica.</li></ul></div></article>
+<article class="credential-card card"><div class="credential-head"><div class="badge badge-purple"><img src="assets/images/badges/operating-systems-basics.png" alt="Insignia Operating Systems Basics" onerror="this.hidden=true"></div><div class="credential-copy"><h3 class="anchored">Operating Systems Basics</h3><p class="issuer">Cisco Networking Academy · Insignia</p><p class="credential-date"><span>Completado</span><time datetime="2026-02-11">11 de febrero de 2026</time></p></div></div><div class="credential-details"><h4 class="anchored">Lo que aprendí</h4><ul><li>Propósito y funciones esenciales de Windows, Linux y sistemas móviles.</li><li>Uso inicial de la terminal y el sistema de archivos de Linux.</li><li>Nociones de seguridad y conectividad en dispositivos móviles.</li></ul></div></article>
+</div>
+</section>
+<section class="contact section" id="contacto">
+<div class="section-title"><h2 class="anchored">Redes y Contacto</h2><p>Conecta conmigo y revisa mis repositorios de código abierto.</p></div>
+<div class="social-grid">
+<a class="social-card card" href="https://github.com/JonnySDE" target="_blank" rel="noopener noreferrer" aria-label="Abrir GitHub de Jonathan Rodríguez"><span class="social-icon brand-github" aria-hidden="true"><svg viewbox="0 0 24 24"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.75-1.32-3.75-1.32-.51-1.29-1.25-1.63-1.25-1.63-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.62 1.22 3.26.93.1-.73.39-1.23.71-1.51-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.43-2.21 1.16-2.99-.12-.28-.5-1.42.11-2.96 0 0 .95-.3 3.08 1.14a10.7 10.7 0 0 1 5.6 0c2.13-1.44 3.08-1.14 3.08-1.14.61 1.54.23 2.68.11 2.96.72.78 1.16 1.77 1.16 2.99 0 4.29-2.62 5.23-5.11 5.51.4.35.76 1.03.76 2.08v3.09c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"></path></svg></span><span><b>GITHUB</b><small>github.com/JonnySDE</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="social-card card" href="https://www.linkedin.com/in/jonathan-rodr%C3%ADguez-cabrera-ba8486435/" target="_blank" rel="noopener noreferrer" aria-label="Abrir LinkedIn de Jonathan Rodríguez"><span class="social-icon brand-linkedin" aria-hidden="true"><svg viewbox="0 0 24 24"><path d="M5.2 3.1a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 0 0 0-4.2ZM3.4 9h3.6v11.7H3.4V9Zm5.8 0h3.4v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5v6.5h-3.6v-5.8c0-1.4 0-3.2-1.9-3.2s-2.2 1.5-2.2 3.1v5.9H9.2V9Z"></path></svg></span><span><b>LINKEDIN</b><small>linkedin.com/in/jonathan-rodríguez-cabrera</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="social-card card" href="https://www.instagram.com/jonathan_rodrgzz/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de Jonathan Rodríguez"><span class="social-icon brand-instagram" aria-hidden="true"><svg viewbox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="instagram-dot" cx="17.6" cy="6.6" r="1"></circle></svg></span><span><b>INSTAGRAM</b><small>@jonathan_rodrgzz</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="social-card card" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jonathanrodriguezcabrera1811%40gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Escribir a Jonathan por Gmail"><span class="social-icon brand-gmail" aria-hidden="true"><svg viewbox="0 0 48 40"><path d="M7 11v23" fill="none" stroke="#4285F4" stroke-width="5" stroke-linecap="round"></path><path d="M41 11v23" fill="none" stroke="#34A853" stroke-width="5" stroke-linecap="round"></path><path d="m7 12 17 13 17-13" fill="none" stroke="#EA4335" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 34h30" fill="none" stroke="#FBBC04" stroke-width="4" stroke-linecap="round"></path></svg></span><span><b>GMAIL</b><small>jonathanrodriguezcabrera1811@gmail.com</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+</div>
+<form class="contact-form card" id="contact-form"><h3 class="anchored">Envíame un mensaje</h3><p>¿Tienes un proyecto o propuesta sobre algún proyecto? Escríbeme.</p><label for="name">Nombre Completo</label><input id="name" name="name" autocomplete="name" placeholder="Tu nombre..." required=""><label for="email">Correo Electrónico</label><input id="email" name="email" type="email" autocomplete="email" placeholder="ejemplo@correo.com" required=""><label for="subject">Asunto / Proyecto de interés</label><input id="subject" name="subject" placeholder="Selecciona o escribe el motivo..." required=""><label for="message">Mensaje</label><textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required=""></textarea><button type="submit">Enviar Mensaje Directo <span>→</span></button><p class="form-note" id="form-note" aria-live="polite">Gmail abrirá un borrador. Revisa el mensaje y pulsa Enviar.</p></form>
+</section>
+</div>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-brand"><strong>Jonathan Rodríguez</strong><span>Estudiante de Ingeniería en Tecnología de la Información e Innovación Digital · UPChiapas</span></div><div class="footer-social"><a href="https://github.com/JonnySDE" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.75-1.32-3.75-1.32-.51-1.29-1.25-1.63-1.25-1.63-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.62 1.22 3.26.93.1-.73.39-1.23.71-1.51-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.43-2.21 1.16-2.99-.12-.28-.5-1.42.11-2.96 0 0 .95-.3 3.08 1.14a10.7 10.7 0 0 1 5.6 0c2.13-1.44 3.08-1.14 3.08-1.14.61 1.54.23 2.68.11 2.96.72.78 1.16 1.77 1.16 2.99 0 4.29-2.62 5.23-5.11 5.51.4.35.76 1.03.76 2.08v3.09c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"></path></svg></a><a href="https://www.linkedin.com/in/jonathan-rodr%C3%ADguez-cabrera-ba8486435/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M5.2 3.1a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 0 0 0-4.2ZM3.4 9h3.6v11.7H3.4V9Zm5.8 0h3.4v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5v6.5h-3.6v-5.8c0-1.4 0-3.2-1.9-3.2s-2.2 1.5-2.2 3.1v5.9H9.2V9Z"></path></svg></a><a href="https://www.instagram.com/jonathan_rodrgzz/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.6" cy="6.6" r="1"></circle></svg></a></div></div><div class="footer-rule"></div><div class="footer-meta"><span>© 2026 Jonathan Rodríguez. Todos los derechos reservados.</span><a href="#inicio">Volver arriba ↑</a></div></footer>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+event.preventDefault();
+const form = new FormData(event.currentTarget);
+const recipient = 'jonathanrodriguezcabrera1811@gmail.com';
+const params = new URLSearchParams({
+view: 'cm',
+fs: '1',
+to: recipient,
+su: form.get('subject'),
+body: `Nombre: ${form.get('name')}\nCorreo: ${form.get('email')}\n\n${form.get('message')}`
+});
+document.getElementById('form-note').textContent = 'Abriendo un borrador en Gmail…';
+window.open(`https://mail.google.com/mail/?${params.toString()}`, '_blank', 'noopener,noreferrer');
+});
+</script>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
